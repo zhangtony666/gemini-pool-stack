@@ -1,0 +1,10 @@
+{
+  "name": "image-verifier-cherry-contract",
+  "private": true,
+  "type": "module",
+  "description": "Optional compatibility test using SDK package versions from Cherry Studio v2.1.2",
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "2.0.72",
+    "ai": "6.0.185"
+  }
+}

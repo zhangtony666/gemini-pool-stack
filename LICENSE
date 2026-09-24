@@ -1,0 +1,52 @@
+MIT License
+
+Copyright (c) 2026 image-verifier-stack contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 第三方组件
+
+本仓库包含或依赖以下第三方项目。它们各自适用其原始许可。
+
+### 随本仓库分发的组件
+
+| 组件 | 位置 | 许可 |
+|---|---|---|
+| image-verifier | `app/` | MIT(见上) |
+
+### 运行时不随仓库分发、由脚本按需下载的组件
+
+| 组件 | 获取方式 | 许可 |
+|---|---|---|
+| [gemini-web2api-go](https://github.com/zexadev/gemini-web2api-go) | `scripts/fetch-gateway.ps1` 从官方 Releases 下载并校验 SHA256 | MIT |
+
+### 未分发、仅作为可选客户端的组件
+
+| 组件 | 许可 |
+|---|---|
+| [Cherry Studio](https://github.com/CherryHQ/cherry-studio) | Apache-2.0 |
+
+---
+
+## 说明
+
+- 网关程序体积较大(约 17 MB),**不纳入本仓库**。`fetch-gateway.ps1` 会从上游官方 Releases 拉取,并核对 `SHA256SUMS.txt` 后才落位。
+- 本仓库不包含任何账号凭证、会话 cookie 或密钥。`config/stack.psd1` 由模板在首次运行时生成,且已被 `.gitignore` 排除。
